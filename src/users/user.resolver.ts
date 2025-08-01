@@ -20,7 +20,11 @@ export class UserResolver {
 
   @Mutation(() => User)
   createUser(@Args('createUserInput') createUserInput: CreateUserInput) {
-    return this.userService.create(createUserInput);
+    try {
+      return this.userService.create(createUserInput);
+    } catch (error) {
+      throw new Error('Error creating user');
+    }
   }
 
   @Mutation(() => User)

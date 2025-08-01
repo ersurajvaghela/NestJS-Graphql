@@ -33,14 +33,15 @@ import { join } from 'path';
       playground: true,
       introspection: true,
       context: ({ req }) => ({ req }), // For authentication
-      formatError: (error) => {
-      // Custom error formatting
-        return {
-        message: error.message,
-        code: error.extensions?.code,
-        path: error.path,
-        };    
-      },
+      // formatError: (formattedError, error) => {
+      //   // Custom error formatting
+      //   return {
+      //     message: formattedError.message,
+      //     locations: formattedError.locations,
+      //     path: formattedError.path,
+      //     extensions: formattedError.extensions,
+      //   };
+      // },
     }),
     UserModule
     // Your other modules here
