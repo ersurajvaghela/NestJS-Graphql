@@ -18,4 +18,5 @@ async function bootstrap() {
   console.log(`GraphQL endpoint: ${await app.getUrl()}/graphql`);
 
 }
+
 bootstrap();
